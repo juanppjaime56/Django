@@ -17,10 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from sistemaProcesamientoSolicitudesTDC.views import siguiente, principal
+from django.views.decorators.csrf import csrf_exempt 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("principal/",principal),
-    path("datosTarjetas/",siguiente),
+    path("datosTarjetas/",csrf_exempt(siguiente)),
 
 ]

@@ -1,6 +1,6 @@
 from django.db import models
 
-class Asignacion(models.Model):
+class Asignacion(models.Model):     
     nombre = models.CharField(max_length=100)
     edad = models.IntegerField()
     nacionalidad = models.CharField(max_length=100)
