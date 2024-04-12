@@ -50,14 +50,14 @@
 </head>
 <body>
     <div class="container">
-        <h1>Bienvenido al apartado de asignación de Tarjetas TDC</h1>
-        <a href="http://localhost:8000/datosTarjetas/">Asignar Tarjeta</a>
         <h1>Tarjetas Asignadas</h1>
-        <ul>
-            {% for asignacion in asignaciones %}
-            <li>{{ asignacion.nombre }}, {{ asignacion.edad }}, {{ asignacion.nacionalidad }}, {{asignacion.numero}}</li>
-            {% endfor %}
-        </ul>
+<p>Cantidad de tarjetas de crédito asignadas: {{ total_asignaciones }}</p>
+<ul>
+    {% for asignacion in asignaciones %}
+    <li>{{ asignacion.nombre }}, {{ asignacion.edad }}, {{ asignacion.nacionalidad }}, {{ asignacion.numero }}</li>
+    {% endfor %}
+</ul>
+
     </div>
 </body>
 </html>

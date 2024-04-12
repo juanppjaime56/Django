@@ -15,9 +15,14 @@ def principal(request):
         if nombre and edad and nacionalidad:
             asignacion = Asignacion(nombre=nombre, edad=edad, nacionalidad=nacionalidad, numero=numero)
             asignacion.save()  
+
+    total_asignaciones = Asignacion.objects.count()
+
+
     asignaciones = Asignacion.objects.all()
 
-    return render(request, "asignacion.html", {'asignaciones': asignaciones})
+    return render(request, "asignacion.html", {'asignaciones': asignaciones, 'total_asignaciones': total_asignaciones})
+
 
 
 

@@ -23,6 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("principal/",principal),
     path("datosTarjetas/",csrf_exempt(siguiente)),
-    path("health-check",healthCheck),
+    path("health-check/",healthCheck),
 
 ]
