@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from .models import Asignacion
+from django.http import HttpResponse
 
+def healthCheck(request):
+    return HttpResponse('ok')
+    Https
 def principal(request):
     if request.method == 'POST':
         nombre = request.POST.get("nombre")
