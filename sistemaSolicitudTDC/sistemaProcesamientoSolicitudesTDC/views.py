@@ -4,15 +4,16 @@ from django.http import HttpResponse
 
 def healthCheck(request):
     return HttpResponse('ok')
-    Https
+
 def principal(request):
     if request.method == 'POST':
         nombre = request.POST.get("nombre")
         edad = request.POST.get("edad")
         nacionalidad = request.POST.get("nacionalidad")
+        numero = request.POST.get("numero")
 
         if nombre and edad and nacionalidad:
-            asignacion = Asignacion(nombre=nombre, edad=edad, nacionalidad=nacionalidad)
+            asignacion = Asignacion(nombre=nombre, edad=edad, nacionalidad=nacionalidad, numero=numero)
             asignacion.save()  
     asignaciones = Asignacion.objects.all()
 
